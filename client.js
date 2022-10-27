@@ -11,8 +11,12 @@ const connect = function () {
   });
 
   conn.on('connect', () => {
-    conn.write(`Name: DL`);
+    conn.write('Name: DL');
   });
+  
+  // conn.on('connect', () => {
+  //   conn.write('Move: up');
+  // });
 
   conn.on('data', (data) => {
     console.log('got the data but', data);
