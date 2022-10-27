@@ -6,6 +6,14 @@ const connect = function () {
     port: 50541,
   });
 
+  conn.on('connect', () => {
+    console.log('Welcome to Snake Game');
+  });
+
+  conn.on('connect', () => {
+    conn.write(`Name: DL`);
+  });
+
   conn.on('data', (data) => {
     console.log('got the data but', data);
   });
